@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 1426067801}
   - component: {fileID: 1426067802}
   - component: {fileID: 1426067803}
-  - component: {fileID: 7145994435227567611}
+  - component: {fileID: 1554187924953531354}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rotateSpeed: 90
---- !u!114 &7145994435227567611
+--- !u!114 &1554187924953531354
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -429,9 +429,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100012}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8b3e39ff06eb8c4e97e4ed614c13a74, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bedbedfa02277140bc2f1b8a7e36839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  input: 1
 --- !u!1 &100014
 GameObject:
   m_ObjectHideFlags: 0

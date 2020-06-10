@@ -3,18 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-[RequireComponent(typeof(TankData))]
 public class TankMotor : MonoBehaviour
 {
     // Need a reference to the Character Controller component.
     private CharacterController characterController;
-    private TankData data;
     private Transform tf;
 
     void Start()
     {
         characterController = gameObject.GetComponent<CharacterController>();
-        data = gameObject.GetComponent<TankData>();
         tf = gameObject.GetComponent<Transform>();
     }
     // Handle Moving the Tank
@@ -41,5 +38,28 @@ public class TankMotor : MonoBehaviour
 
         // Pass our rotation vector into transform.rotate
         tf.Rotate(rotateVector, Space.Self);
+    }
+
+    /// <summary>
+    /// Rotates toward a target.
+    /// </summary>
+    /// <param name="target">Target to rotate toward.</param>
+    /// <param name="speed">Rotation Speed.</param>
+    /// <returns>Returns true if it rotated. Returns false if already facing target.</returns>
+    public bool RotateTowards(Vector3 target, float speed)
+    {
+        // Find the vector to the target.
+        Vector3 vectorToTarget = target - tf.position;
+
+        // Find the quaternion that looks down that vector.
+        Quaternion targetRotation = Quaternion.LookRotation(vectorToTarget);
+        
+        if (targetRotation == tf.rotation)
+        {
+            return false;
+        }
+
+        tf.rotation = Quaternion.RotateTowards(tf.rotation, targetRotation, speed * Time.deltaTime);
+        return true;
     }
 }
