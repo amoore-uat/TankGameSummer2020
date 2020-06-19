@@ -34,13 +34,18 @@ public class SampleAIController2 : MonoBehaviour
         }
         if (attackMode == AttackMode.Flee)
         {
-            Vector3 vectorToTarget = target.position - tf.position;
-            Vector3 vectorAwayFromTarget = -vectorToTarget;
-
-            vectorAwayFromTarget.Normalize();
-            Vector3 fleePosition = vectorAwayFromTarget + tf.position;
-            motor.RotateTowards(fleePosition, data.rotateSpeed);
-            motor.Move(data.moveSpeed);
+            Flee();
         }
+    }
+
+    private void Flee()
+    {
+        Vector3 vectorToTarget = target.position - tf.position;
+        Vector3 vectorAwayFromTarget = -vectorToTarget;
+
+        vectorAwayFromTarget.Normalize();
+        Vector3 fleePosition = vectorAwayFromTarget + tf.position;
+        motor.RotateTowards(fleePosition, data.rotateSpeed);
+        motor.Move(data.moveSpeed);
     }
 }
