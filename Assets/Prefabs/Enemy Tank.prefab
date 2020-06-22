@@ -309,6 +309,7 @@ GameObject:
   - component: {fileID: 5074289939883919613}
   - component: {fileID: 5654222229878195419}
   - component: {fileID: 3463314075177401279}
+  - component: {fileID: 6761736000971622442}
   m_Layer: 0
   m_Name: Enemy Tank
   m_TagString: Untagged
@@ -373,8 +374,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0471638ea69d60544bce27acb74f78fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
+  currentHealth: 0
   moveSpeed: 5
   rotateSpeed: 90
+  attackDamage: 5
+  fireRate: 0
 --- !u!114 &5654222229878195419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,6 +410,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackMode: 0
   target: {fileID: 0}
+--- !u!114 &6761736000971622442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5074289939162537738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cb5e1dfab154d24baf570e617aae14f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerups: []
 --- !u!1 &5074289939162537740
 GameObject:
   m_ObjectHideFlags: 0
