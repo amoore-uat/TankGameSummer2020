@@ -74,7 +74,12 @@ public class SampleAIController4 : MonoBehaviour
                 // Should we flee?
                 if (CheckForFlee())
                 {
-                    Flee();
+                    ChangeState(AIState.Flee);
+                }
+                // Should we wait for backup?
+                else if(true)
+                {
+                    ChangeState(AIState.WaitForBackup);
                 }
                 // Should we wait for backup?
                 break;
