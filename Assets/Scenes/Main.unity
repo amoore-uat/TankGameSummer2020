@@ -1267,6 +1267,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1682304844}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1133500445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133500444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b8b7c962931674db6430d26a0ad701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScoreData:
+    score: 0
+    name: 
 --- !u!114 &1133500450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2047,7 +2062,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72c1bb03b300b741977b7926c0e1fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleText: {fileID: 1404008089}
+  musicVolume: 1
+  fxVolume: 1
 --- !u!4 &1914147979
 Transform:
   m_ObjectHideFlags: 0
@@ -2439,8 +2455,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4469848655577406830, guid: 7658b2e5e80b7034491b409af86861cc,
         type: 3}
+      propertyPath: scores.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469848655577406830, guid: 7658b2e5e80b7034491b409af86861cc,
+        type: 3}
       propertyPath: playerPrefab
       value: 
       objectReference: {fileID: 100012, guid: 65e92f227846e794883569c427a9c4c3, type: 3}
+    - target: {fileID: 4469848655577406830, guid: 7658b2e5e80b7034491b409af86861cc,
+        type: 3}
+      propertyPath: scores.Array.data[0].score
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469848655577406830, guid: 7658b2e5e80b7034491b409af86861cc,
+        type: 3}
+      propertyPath: scores.Array.data[0].name
+      value: Adam
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469848655577406830, guid: 7658b2e5e80b7034491b409af86861cc,
+        type: 3}
+      propertyPath: scores.Array.data[1].score
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469848655577406830, guid: 7658b2e5e80b7034491b409af86861cc,
+        type: 3}
+      propertyPath: scores.Array.data[1].name
+      value: Bob
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469848655577406830, guid: 7658b2e5e80b7034491b409af86861cc,
+        type: 3}
+      propertyPath: scores.Array.data[2].score
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469848655577406830, guid: 7658b2e5e80b7034491b409af86861cc,
+        type: 3}
+      propertyPath: scores.Array.data[2].name
+      value: Chad
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469848655577406830, guid: 7658b2e5e80b7034491b409af86861cc,
+        type: 3}
+      propertyPath: scores.Array.data[3].score
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469848655577406830, guid: 7658b2e5e80b7034491b409af86861cc,
+        type: 3}
+      propertyPath: scores.Array.data[3].name
+      value: Dave
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469848655577406830, guid: 7658b2e5e80b7034491b409af86861cc,
+        type: 3}
+      propertyPath: scores.Array.data[4].score
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469848655577406830, guid: 7658b2e5e80b7034491b409af86861cc,
+        type: 3}
+      propertyPath: scores.Array.data[4].name
+      value: Erin
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7658b2e5e80b7034491b409af86861cc, type: 3}
